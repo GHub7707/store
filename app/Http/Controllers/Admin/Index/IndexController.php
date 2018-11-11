@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers\Admin\Index;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+use App\Http\Controllers\Admin\BaseController;
+use Illuminate\Http\Request;
+
+class IndexController extends BaseController
 {
     /**
-     * Display a listing of the resource.
-     *
+     *  首页
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('Admin.Index.index');
+        return view('Admin.Index.index')->with('routeName', $this->routeName);
     }
 
     /**
@@ -58,6 +58,9 @@ class AdminController extends Controller
     public function edit($id)
     {
         //
+
+        echo '232323';
+        die;
     }
 
     /**
